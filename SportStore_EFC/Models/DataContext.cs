@@ -20,6 +20,10 @@ namespace SportStore_EFC.Models
         
         public DbSet<Category> Categories { get; set; }
 
+        public DbSet<Order> Orders { get; set; }
+
+        public DbSet<OrderLine> OrderLines { get; set; }
+
 
     }
 }

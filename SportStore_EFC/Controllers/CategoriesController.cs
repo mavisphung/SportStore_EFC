@@ -27,7 +27,7 @@ namespace SportStore_EFC.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        public IActionResult EditCetegory(long id)
+        public IActionResult EditCategory(long id)
         {
             ViewBag.EditID = id;
             return View("Index", repository.Categories);

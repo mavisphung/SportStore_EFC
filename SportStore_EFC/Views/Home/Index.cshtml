@@ -21,34 +21,6 @@
             <div class="col font-weight-bold text-right">Retail Price</div>
             <div class="col"></div>
         </div>
-        <form asp-action="AddProduct" method="post">
-            <div class="row p-2">
-                <div class="col-1"></div>
-                <div class="col"><input name="Name" class="form-control" /></div>
-                <div class="col">
-                    <input name="Category" class="form-control" />
-                    @*<select class="form-control">
-                        @if (categories.Count() == 0)
-                        {
-                            <option disabled selected>Choose category</option>
-                        }
-                        @foreach (Category category in categories)
-                        {
-                            <option selected=@category.ID value="@category.ID">@category.Name</option>
-                        }
-                    </select>*@
-                </div>
-                <div class="col">
-                    <input name="PurchasePrice" class="form-control" />
-                </div>
-                <div class="col">
-                    <input name="RetailPrice" class="form-control" />
-                </div>
-                <div class="col">
-                    <button type="submit" class="btn btn-primary">Add</button>
-                </div>
-            </div>
-        </form>
         @if (Model.Count() == 0)
         {
             <div class="row placeholder">
@@ -79,13 +51,12 @@
                     </div>
                 </div>
             }
-
-            <div class="text-center">
-                <a asp-action="UpdateAll" class="btn btn-primary">Edit All</a>
-            </div>
         }
         //---------------------------------------
-
+        <div class="text-center p-2">
+            <a asp-action="UpdateProduct" asp-route-key="0"
+               class="btn btn-primary">Add</a>
+        </div>
     }
     else
     {

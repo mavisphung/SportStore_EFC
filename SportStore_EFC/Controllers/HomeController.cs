@@ -14,7 +14,7 @@ namespace SportStore_EFC.Controllers
 
         public HomeController(IRepository repo, ICategoryRepository cateRepo)
         {
-            repository = repo;
+            repository = repo; 
             cateRepository = cateRepo;
         }
         public IActionResult Index()

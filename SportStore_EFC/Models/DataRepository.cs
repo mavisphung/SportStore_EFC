@@ -41,6 +41,7 @@ namespace SportStore_EFC.Models
 
         public Product GetProduct(long key)
         {
+            //FindProductByID
             return context.Products.Include(product => product.Category).First(product => product.ID == key);
         }
 
